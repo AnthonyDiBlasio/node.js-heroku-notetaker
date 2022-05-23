@@ -16,9 +16,14 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 * [Questions](#questions)
 ## Installation
 ```
-https://enigmatic-reef-84566.herokuapp.com/
-https://github.com/AnthonyDiBlasio/node.js-heroku-notetaker
+Deployed Link to app
 ```
+https://enigmatic-reef-84566.herokuapp.com/
+```
+Link to apps github url
+```
+https://github.com/AnthonyDiBlasio/node.js-heroku-notetaker
+
 ## Usage
 ```
 GIVEN a note-taking application
