@@ -1,8 +1,9 @@
 // const require packages/port
 const express = require('express');
 const uniqid = require('uniqid');
+const path = require('path');
 const PORT = process.env.PORT || 3001;
-const db = require('./db/db.json');
+const database = require('./db/db.json');
 const fs = require('fs');
 const app = express();
 app.use(express.json());
@@ -17,7 +18,7 @@ app.get('/', (req, res) =>
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
-app.get('/api/notes', (req, res) => res.json(db));
+app.get('/api/notes', (req, res) => res.json(database));
 //POST for notes
 app.post('/api/notes', (req, res) =>{
   const { title, text } = req.body;
@@ -27,17 +28,17 @@ app.post('/api/notes', (req, res) =>{
     id : uniqid(),
   }
   console.log(req.body);
-  db.push(newnote);
-  fs.writeFile('./db/db.json',JSON.stringify(db), (err) => console.log(err));
+  database.push(newnote);
+  fs.writeFile('./db/db.json',JSON.stringify(database), (err) => console.log(err));
 
 } );
 // DELETE for notes
 app.delete('/api/notes/:id', (req, res) =>{
   console.log(req.params.id)
-  let index = db.findIndex(item => item.id === req.params.id);
-  db.splice(index, 1);
+  let index = database.findIndex(item => item.id === req.params.id);
+  database.splice(index, 1);
   res.sendStatus(200);
-  fs.writeFile('./db/db.json',JSON.stringify(db), (err) => console.log(err));
+  fs.writeFile('./db/db.json',JSON.stringify(database), (err) => console.log(err));
 } );
 
 // listen for localhost 3001
