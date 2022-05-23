@@ -35,6 +35,11 @@ THEN that note appears in the right-hand column
 WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
+
+[](https://raw.githubusercontent.com/AnthonyDiBlasio/node.js-heroku-notetaker/main/assets/notetaker1.jpg)
+[](https://raw.githubusercontent.com/AnthonyDiBlasio/node.js-heroku-notetaker/main/assets/notetaker2.jpg)
+[](https://raw.githubusercontent.com/AnthonyDiBlasio/node.js-heroku-notetaker/main/assets/notetaker3.jpg)
+[](https://raw.githubusercontent.com/AnthonyDiBlasio/node.js-heroku-notetaker/main/assets/serverpic.jpg)
 ## License
 
 This application is covered by the Apache v2.0 License, the terms of which can be found [here](https://www.apache.org/licenses/LICENSE-2.0.txt).
