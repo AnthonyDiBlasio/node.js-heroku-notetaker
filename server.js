@@ -21,6 +21,7 @@ app.get('/notes', (req, res) =>
 app.get('/api/notes', (req, res) => res.json(database));
 //POST for notes
 app.post('/api/notes', (req, res) =>{
+  res.json('completed')
   const { title, text } = req.body;
   const newnote = {
     title,
